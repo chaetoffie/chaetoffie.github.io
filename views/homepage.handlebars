@@ -1,0 +1,55 @@
+<div class='title'>
+  <h1 class="title-purp"> Vinyld</h1><br /><br /><br>
+  <div class="album-wall">
+  {{#each coverUrls}}
+    <img src="{{this}}" alt="Album cover">
+  {{/each}}
+</div>
+
+<div class="content-wrapper">
+  <!-- your Vinyld title, welcome text, post loop, etc. -->
+</div>
+  <p>Welcome to <strong>Vinyld</strong> — your analog oasis in a digital world.<br>
+Spin up a profile and drop your takes on the tracks that move you — or don’t. Here, all grooves are welcome, and every opinion gets a place on the record.<br>
+Join the rotation, comment on others’ spins, and connect with fellow crate-diggers. Whether you're into dusty B-sides or modern pressings, Vinyld keeps the conversation spinning.
+  </p>
+</div>
+
+{{#each posts as |post|}}
+<div class='row mb-4 post'>
+  <div class='col-md-12'>
+    {{! Displays the Blog Post's Title --> routes to the blog post when you click on the title }}
+    <h2>
+      {{! routes to this specific post's page }}
+      <a href='/post/{{post.id}}'>
+        {{! displays the name of the Post and makes it clickable to that ^ route }}
+        {{post.title}}
+      </a>
+    </h2>
+    <div class='col-md-10'>
+      <h2>
+        <a href='/post/{{post.id}}'></a>
+        {{! displays the date it was created and by which user }}
+        <p>Posted on
+          {{format_date post.date_created}}
+          by music snob:<br />
+          <a class="snob" href="/user/{{user_id}}">{{user.name}}</a><br>
+      </h2>
+    </div>
+  </div>
+</div>
+{{/each}}
+
+
+{{!-- <div class="mode-layer"></div>
+<div class="flip-card mode-button mode-animation">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">🌙</div>
+    <div class="flip-card-back">🔆</div>
+  </div>
+</div>
+
+
+
+
+<script src="../public/js/dark-mode-light-mode/index.js"></script> --}}

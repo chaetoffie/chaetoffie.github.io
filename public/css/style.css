@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff4e6;
+  color: #5a3e36;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 2px solid #ffae42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+}
+
+main {
+  flex: 1;
+  padding: 4% 8%;
+}
+
+a, .snob {
+  text-decoration: none;
+  font-weight: bold;
+  color: #cc7722;
+}
+
+a:hover, .snob:hover {
+  color: #ffae42;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #332211;
+  color: #fff;
+  height: 60px;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 4%;
+  align-items: center;
+}
+
+nav li a, nav li button, #logout {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffae42;
+  font-size: x-large;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  background: none;
+}
+
+nav li a:hover, nav li button:hover, #logout:hover {
+  background-color: #cc7722;
+  color: #fff;
+}
+
+button, .btn-no-style {
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffae42;
+  color: #332211;
+}
+
+button:hover, .btn-no-style:hover {
+  background-color: #cc7722;
+  color: #fff;
+}
+
+footer {
+  border-top: 1px solid #ffae42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  background-color: #fff4e6;
+  padding: 1%;
+  color: #5a3e36;
+}
+
+textarea,
+input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid #cc7722;
+  background-color: #fff9f0;
+  color: #5a3e36;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid #ffae42;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+form > div {
+  margin-bottom: 2%;
+}
+
+form label {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title, .title-purp {
+  text-align: center;
+  padding: 2%;
+  color: #5a3e36;
+}
+
+.welcome-text {
+  max-width: 700px;
+  margin: 2em auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #5a3e36;
+}
+
+.comment-post {
+  padding-right: 1em;
+  text-align: right;
+}
+
+.comment {
+  background-color: #ffefdb;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 1%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ffdda8;
+}
+
+.postcard {
+  background-color: #fff6e0;
+}
+
+.thumbs {
+  padding-right: 1em;
+  padding-bottom: 1em;
+  text-align: right;
+}
+
+.card {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  border-radius: 5px;
+  background-color: #fff9ec;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 2em;
+}
+
+.card-music {
+  padding-top: 2em;
+  font-family: 'PressStart', Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #cc7722;
+  font-size: 0.9rem;
+}
+
+.delete-post-btn, .delbtn {
+  background-color: #b23b3b;
+  color: #fff;
+}
+
+.delete-post-btn:hover, .delbtn:hover {
+  background-color: #e0512c;
+}
+
+h1 {
+  color: #b36a00;
+  font-family: 'PressStart', Arial, Helvetica, sans-serif;
+  text-align: left;
+  border-style: dashed;
+  border-color: #ffae42;
+  border-width: 10px;
+  letter-spacing: 6px;
+  padding: 1em 2em;
+  display: inline-block;
+  width: auto;
+}
+
+.desc {
+  text-align: left;
+  padding-left: 1em;
+}
+
+h4 {
+  text-align: center;
+}
+
+input {
+  width: 300px !important;
+}
+
+/* Dark Mode (Still Optional) */
+body.dark-mode {
+  background-color: #3a2d22;
+  color: #ffe0b2;
+}
+
+nav.dark-mode {
+  background-color: #221811;
+  color: #fff;
+}
+
+nav.dark-mode li a {
+  color: #ffe0b2;
+}
+
+nav.dark-mode li a:hover {
+  background-color: #ffae42;
+}
+
+footer.dark-mode {
+  background-color: #221811;
+  color: #ffe0b2;
+}
+.album-wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 4px;
+  opacity: 0.1;
+  filter: grayscale(60%) blur(1.2px);
+  z-index: -1;
+  overflow: hidden;
+}
+
+.album-wall img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
